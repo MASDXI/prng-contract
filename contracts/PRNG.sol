@@ -19,8 +19,8 @@ contract PRNG is IPRNG {
     // TODO modifier isWorker(oracle.signer);
     //      for preventing client crate their own fake signed message for abuse RNG
     function random(
-        Entropy memory client,
-        Entropy memory oracle,
+        Entropy calldata client,
+        Entropy calldata oracle,
         uint256 length
     ) external override returns (uint256) {
         require(
