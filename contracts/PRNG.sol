@@ -37,7 +37,7 @@ contract PRNG is IPRNG {
         );
         bytes memory s1 = _salt(client.hash, client.sig);
         bytes memory s2 = _salt(oracle.hash, oracle.sig);
-        uint256 result = uint256(keccak256(abi.encodePacked(s1, s2))) % length;
+        uint256 result = _random(s1, s2, length);
         emit Random(result, s1, s2, length);
         return result;
     }
@@ -64,6 +64,17 @@ contract PRNG is IPRNG {
         return salted;
     }
 
+     /**
+     * @notice random internal logic
+     * @param s1 salted secret signed message from client
+     * @param s2 salted secret signed message from oracle
+     * @param length possible number under length for random
+     * @return boolean
+     */
+    function _random(bytes memory s1,bytes memory s2,uint256 length) private pure returns(uint256) {
+        return uint256(keccak256(abi.encodePacked(s1, s2))) % length;
+    }
+
     /**
      * @notice Proving random
      * @param number result of random
@@ -77,7 +88,7 @@ contract PRNG is IPRNG {
         bytes memory s2,
         uint256 length
     ) external pure override returns (bool) {
-        uint256 result = uint256(keccak256(abi.encodePacked(s1, s2))) % length;
+        uint256 result = _random(s1, s2, length);
         return (number == result);
     }
 }
