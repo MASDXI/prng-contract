@@ -10,6 +10,15 @@ contract PRNG is IPRNG {
     // ["0x2c7536E3605D9C16a7a3D7b1898e529396a65c23","0xb91467e570a6466aa9e9876cbcd013baba02900b8979d43fe208a4a4f339f5fd6007e74cd82e037b800186422fc2da167c747ef045e5d18a5f5d4300f8e1a0291c","0x1da44b586eb0729ff70a73c326926f6ed5a25f5b056e7f47fbc6e58d86871655"]
 
     /**
+     * @notice checking length before
+     * @param n input number 
+     */
+    modifier checkLength(uint256 n) {
+        require(n > 0 && n > 1,"modifier: length '0' or '1' is not allow");
+        _;
+    }
+
+    /**
      * @notice Random number
      * @param client struct Entropy signed message from client
      * @param oracle struct Entropy signed message from oracle
@@ -22,7 +31,7 @@ contract PRNG is IPRNG {
         Entropy calldata client,
         Entropy calldata oracle,
         uint256 length
-    ) external override returns (uint256) {
+    ) external override checkLength(length) returns (uint256) {
         require(
             SignatureChecker.isValidSignatureNow(
                 oracle.signer,
