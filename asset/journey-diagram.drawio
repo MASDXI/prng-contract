@@ -1,0 +1,54 @@
+<mxfile host="65bd71144e">
+    <diagram id="NlcwOjMlecbw3aFO_u1E" name="Page-1">
+        <mxGraphModel dx="593" dy="346" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="22" value="request oracle signed message" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="12">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="145" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=none;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="65" y="268" width="160" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="call random()" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Client" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="90" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="PRNG contract" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#000000;fillColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.documents;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="90" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Oracle" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="287" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Oracle Contract" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#000000;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.documents;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="293" width="46" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="return random" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="160" y="100" as="sourcePoint"/>
+                        <mxPoint x="420" y="100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="Blockhain network" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="610" y="60" width="160" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="reading env&amp;nbsp;" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="480" y="119.5" as="sourcePoint"/>
+                        <mxPoint x="620" y="119.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="emit Random()" style="edgeStyle=none;html=1;entryX=0.081;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="480" y="130" as="sourcePoint"/>
+                        <mxPoint x="740" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
